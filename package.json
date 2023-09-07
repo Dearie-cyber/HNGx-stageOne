@@ -1,0 +1,22 @@
+{
+  "name": "hngx-backend",
+  "version": "1.0.0",
+  "description": "Internship first task",
+  "main": "app.js", 
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dearie-cyber/HNGx-stageOne.git"
+  },
+  "author": "Eburu Dearie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dearie-cyber/HNGx-stageOne/issues"
+  },
+  "homepage": "https://github.com/Dearie-cyber/HNGx-stageOne#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
