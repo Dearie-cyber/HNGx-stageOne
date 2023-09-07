@@ -1,11 +1,10 @@
-[
+
     {
         "slack_name": "Eburu Dearie",
-        "current_day": "Wednesday",
+        "current_day": "Thursday",
         "utc_time": "",
         "track": "backend",
-        "github_file_url": "",
-        "github_repo_url": "",
+        "github_file_url": "https://github.com/Dearie-cyber/HNGx-stageOne/blob/master/app.js",
+        "github_repo_url": "https://github.com/Dearie-cyber/HNGx-stageOne",
         "status_code": 200
     }
-]
