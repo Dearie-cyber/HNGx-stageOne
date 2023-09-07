@@ -24,8 +24,6 @@ const currentUTCTime = new Date().toISOString();
 
 const getUser = (req, res) => {
   res.status(200).json({
-    status: "success",
-    results: user.length,
     data: {
       slack_name: req.query.slack_name,
       current_day: currentDayName,
