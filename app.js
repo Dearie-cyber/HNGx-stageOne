@@ -19,11 +19,20 @@ const dayNames = [
 ];
 const currentDayIndex = currentDate.getUTCDay();
 const currentDayName = dayNames[currentDayIndex];
-const currentUtcTime = new Date().toISOString();
+// const currentUtcTime = new Date().toISOString();
+
+const current = new Date();
+const year = current.getUTCFullYear();
+const month = String(current.getUTCMonth() + 1).padStart(2, "0"); // Add 1 to month because it's 0-indexed
+const day = String(current.getUTCDate()).padStart(2, "0");
+const hours = String(current.getUTCHours()).padStart(2, "0");
+const minutes = String(current.getUTCMinutes()).padStart(2, "0");
+const seconds = String(current.getUTCSeconds()).padStart(2, "0");
+
+const currentUtcTime = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}Z`;
 
 
 app.get("/api", (req, res) => {
- 
   res.status(200).json({
     slack_name: req.query.slack_name,
     current_day: currentDayName,
@@ -31,7 +40,7 @@ app.get("/api", (req, res) => {
     track: req.query.track,
     github_file_url: user.github_file_url,
     github_repo_url: user.github_repo_url,
-    status_code: user.status_code, 
+    status_code: user.status_code,
   });
 });
 const port = 3000;
