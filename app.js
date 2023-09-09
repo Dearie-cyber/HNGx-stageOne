@@ -21,8 +21,11 @@ const currentDayIndex = currentDate.getUTCDay();
 const currentDayName = dayNames[currentDayIndex];
 
 
-const current = new Date();
-const currentUTCTime = current.toISOString().split('.')[0] + 'Z';
+// const current = new Date();
+// const currentUTCTime = current.toISOString().split('.')[0] + 'Z';
+
+const currentUTCTime = new Date().toISOString().slice(0, 19) + 'Z';
+
 
 
 
