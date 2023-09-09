@@ -23,6 +23,8 @@ const currentDayName = dayNames[currentDayIndex];
 const currentUTCTime = new Date().toISOString();
 
 const getUser = (req, res) => {
+  res.setHeader("Content-Type", "application/json");
+
   res.status(200).json({
     data: {
       slack_name: req.query.slack_name,
@@ -42,4 +44,4 @@ app.listen(port, () => {
   console.log(`App running on port ${port}...`);
 });
 
-// add .split('.')[0] + 'Z' after your Date().toISOString() 
+// add .split('.')[0] + 'Z' after your Date().toISOString()
