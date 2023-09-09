@@ -25,7 +25,6 @@ const currentUTCTime = new Date().toISOString();
 const getUser = (req, res) => {
 
   res.status(200).json({
-    data: {
       slack_name: req.query.slack_name,
       current_day: currentDayName,
       utc_time: currentUTCTime,
@@ -33,11 +32,8 @@ const getUser = (req, res) => {
       github_file_url: user.github_file_url,
       github_repo_url: user.github_repo_url,
       status_code: user.status_code,
-    },
   });
-  res.writeHead(200,{
-    'Content-type': 'application/json'
-  })
+ 
 };
 
 app.get("/api", getUser);
