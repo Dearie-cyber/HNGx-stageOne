@@ -23,7 +23,6 @@ const currentDayName = dayNames[currentDayIndex];
 const currentUTCTime = new Date().toISOString();
 
 const getUser = (req, res) => {
-  res.setHeader("Content-Type", "application/json");
 
   res.status(200).json({
     data: {
@@ -36,6 +35,9 @@ const getUser = (req, res) => {
       status_code: user.status_code,
     },
   });
+  res.writeHead(200,{
+    'Content-type': 'application/json'
+  })
 };
 
 app.get("/api", getUser);
