@@ -24,9 +24,10 @@ const currentDayName = dayNames[currentDayIndex];
 // const current = new Date();
 // const currentUTCTime = current.toISOString().split('.')[0] + 'Z';
 
-const currentUTCTime = new Date().toISOString().slice(0, 19) + 'Z';
+// const currentUTCTime = new Date().toISOString().slice(0, 19) + 'Z';
 
-
+const current = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60000);
+const currentUTCTime = current.toISOString().split('.')[0] + 'Z';
 
 
 app.get("/api", (req,res)=> {
@@ -45,4 +46,4 @@ app.listen(port, () => {
   console.log(`App running on port ${port}...`);
 });
 
-// add .split('.')[0] + 'Z' after your Date().toISOString()
+
