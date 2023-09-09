@@ -20,8 +20,9 @@ const dayNames = [
 const currentDayIndex = currentDate.getUTCDay();
 const currentDayName = dayNames[currentDayIndex];
 
-const currentUTCTime = new Date().toISOString();
 
+const utc = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60000);
+const currentUTCTime = utc.toISOString().split('.')[0] + 'Z';
 
 
 app.get("/api", (req,res)=> {
