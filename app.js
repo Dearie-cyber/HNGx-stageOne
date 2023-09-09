@@ -36,8 +36,10 @@ const getUser = (req, res) => {
   });
 };
 
-app.get("/api/v1/user", getUser);
+app.get("/api", getUser);
 const port = 3000;
 app.listen(port, () => {
   console.log(`App running on port ${port}...`);
 });
+
+// add .split('.')[0] + 'Z' after your Date().toISOString() 
